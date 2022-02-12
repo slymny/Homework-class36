@@ -30,8 +30,11 @@ const employeeRecords = [
 ];
 
 // ! Function under test
-function filterPrivateData(/* TODO parameter(s) go here */) {
-  // TODO complete this function
+function filterPrivateData(arr) {
+  return arr.map((item) => {
+    const { name, occupation, email } = item;
+    return { name: name, occupation: occupation, email: email };
+  });
 }
 
 // ! Test functions (plain vanilla JavaScript)

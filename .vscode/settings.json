@@ -16,5 +16,9 @@
   "editor.bracketPairColorization.enabled": true,
   "editor.guides.bracketPairs": true,
   "editor.guides.highlightActiveIndentation": true,
-  "editor.guides.bracketPairsHorizontal": "active"
+  "editor.guides.bracketPairsHorizontal": "active",
+  "workbench.colorTheme": "Cobalt2",
+  "editor.tokenColorCustomizations": {
+    "comments": "#ff9b06"
+  }
 }
