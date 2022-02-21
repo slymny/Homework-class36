@@ -33,7 +33,7 @@ const employeeRecords = [
 function filterPrivateData(arr) {
   return arr.map((item) => {
     const { name, occupation, email } = item;
-    return { name: name, occupation: occupation, email: email };
+    return { name, occupation, email };
   });
 }
 
