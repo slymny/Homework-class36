@@ -27,9 +27,8 @@ exercise file.
 const rollDie = require('../../helpers/pokerDiceRoller');
 
 function rollDice() {
-  // TODO Refactor this function
   const dice = [1, 2, 3, 4, 5];
-  return rollDie(1);
+  return Promise.all(dice.map((roll) => rollDie(roll)));
 }
 
 function main() {
@@ -43,3 +42,4 @@ if (process.env.NODE_ENV !== 'test') {
   main();
 }
 module.exports = rollDice;
+// After rejecting dice keep turning on the floor because it is not settled yet. It stop spinning only when it's settled.
