@@ -1,1 +1,47 @@
 /* add your styling here */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 2rem;
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(rgb(7, 51, 39), #628395ff, #dad7cdff);
+}
+
+img {
+  width: 150px;
+}
+
+button {
+  background-color: rgb(7, 51, 39);
+  color: #dad7cdff;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 2rem;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: #dad7cdff;
+  color: rgb(7, 51, 39);
+}
+
+.button-clicked {
+  background-color: #dad7cdff;
+  color: rgb(7, 51, 39);
+}
+
+select {
+  border-radius: 4px;
+  padding: 0.5rem;
+  font-size: 1rem;
+}

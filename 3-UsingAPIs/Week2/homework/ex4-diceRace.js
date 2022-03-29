@@ -15,14 +15,16 @@ const rollDie = require('../../helpers/pokerDiceRoller');
 
 function rollDice() {
   const dice = [1, 2, 3, 4, 5];
-  // TODO complete this function; use Promise.race() and rollDie()
+  return Promise.race(dice.map(() => rollDie()));
 }
 
-// Refactor this function to use async/await and try/catch
-function main() {
-  rollDice()
-    .then((results) => console.log('Resolved!', results))
-    .catch((error) => console.log('Rejected!', error.message));
+async function main() {
+  try {
+    const results = await rollDice();
+    console.log('Resolved!', results);
+  } catch (error) {
+    console.log('Rejected!', error.message);
+  }
 }
 
 // ! Do not change or remove the code below
@@ -30,3 +32,6 @@ if (process.env.NODE_ENV !== 'test') {
   main();
 }
 module.exports = rollDice;
+
+// Promise.race creates a Promise that is resolved or rejected when any of the provided Promises are resolved or rejected.
+// Because of that the first resolved or rejected promise returns, but the unresolved or not rejected promises continue to work till they resolve or reject.
